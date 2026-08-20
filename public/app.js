@@ -67,7 +67,7 @@ function show(s){
 
 
 const DISCORD_REPORT_RADIUS = 15;
-const SITE_URL = 'https://gregs-maker.github.io/Lorcana-Clearwater-Store-Tracker/';
+const SITE_URL = 'https://gregs-maker.github.io/Lorcana-New-Port-Richey-Store-Tracker/';
 
 function remainingFor(store,target){
   return {
@@ -120,8 +120,8 @@ function buildDiscordReport(){
   }
   const hasNew=active.some(s=>s.tier.isNew);
   const note=hasNew?`\n\n*\\* Store has less than one year of recorded Play Hub activity; tier thresholds use estimated first-year proration.*`:'';
-  return `## 📊 Pinellas Lorcana Store Activity Report
-**Weekly Play Hub snapshot · Updated ${discordDate()} · 15-mile radius from Clearwater · Active stores only**
+  return `## 📊 Pasco Lorcana Store Activity Report
+**Weekly Play Hub snapshot · Updated ${discordDate()} · 15-mile radius from New Port Richey · Active stores only**
 
 ${sections.join('\n\n')}${note}
 
