@@ -9,7 +9,7 @@ try {
 
 const stores = data.stores || [];
 const maxRadius = Math.min(40, Number(data.maxDisplayRadiusMiles || data.radiusMiles || 40));
-const defaultRadius = Math.min(maxRadius, Number(data.defaultDisplayRadiusMiles || 15));
+const defaultRadius = Math.min(maxRadius, Number(data.defaultDisplayRadiusMiles || 20));
 const radius = $('#radius');
 radius.max = String(maxRadius);
 radius.value = String(defaultRadius);
@@ -66,7 +66,7 @@ function show(s){
 }
 
 
-const DISCORD_REPORT_RADIUS = 15;
+const DISCORD_REPORT_RADIUS = 20;
 const SITE_URL = 'https://gregs-maker.github.io/Lorcana-New-Port-Richey-Store-Tracker/';
 
 function remainingFor(store,target){
