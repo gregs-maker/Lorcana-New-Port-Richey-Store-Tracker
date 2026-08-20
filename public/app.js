@@ -121,7 +121,7 @@ function buildDiscordReport(){
   const hasNew=active.some(s=>s.tier.isNew);
   const note=hasNew?`\n\n*\\* Store has less than one year of recorded Play Hub activity; tier thresholds use estimated first-year proration.*`:'';
   return `## 📊 New Port Richey Lorcana Store Activity Report
-**Weekly Play Hub snapshot · Updated ${discordDate()} · 15-mile radius from New Port Richey · Active stores only**
+**Weekly Play Hub snapshot · Updated ${discordDate()} · 20-mile radius from New Port Richey · Active stores only**
 
 ${sections.join('\n\n')}${note}
 
