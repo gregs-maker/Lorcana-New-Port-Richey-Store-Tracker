@@ -1,0 +1,10 @@
+{
+  "generatedAt": null,
+  "center": {
+    "formattedAddress": "New Port Richey, Florida"
+  },
+  "radiusMiles": 40,
+  "defaultDisplayRadiusMiles": 15,
+  "maxDisplayRadiusMiles": 40,
+  "stores": []
+}
