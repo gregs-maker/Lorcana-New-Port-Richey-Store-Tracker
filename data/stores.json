@@ -1,12 +1,12 @@
 {
-  "generatedAt": "2026-08-20T21:38:20.979Z",
+  "generatedAt": "2026-08-20T21:54:51.957Z",
   "center": {
     "lat": 28.2441768,
     "lng": -82.7192671,
     "formattedAddress": "New Port Richey, FL, USA"
   },
   "radiusMiles": 40,
-  "defaultDisplayRadiusMiles": 15,
+  "defaultDisplayRadiusMiles": 20,
   "maxDisplayRadiusMiles": 40,
   "metricStart": "2025-08-20",
   "metricEnd": "2026-08-20",
