@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "private": true,
   "type": "module",
-  "description": "Estimate Ravensburger Play Hub store tiers for stores near Clearwater, Florida.",
+  "description": "Estimate Ravensburger Play Hub store tiers for stores near New Port Richey, Florida.",
   "scripts": {
     "sync": "node src/sync.js",
     "start": "node src/server.js",
