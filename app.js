@@ -20,7 +20,7 @@ function selectedRadius(){return Number(radius.value);}
 function updateScope(){
   const r=selectedRadius();
   $('#radiusValue').textContent=`${r} miles`;
-  $('#scope').textContent=`${data.center?.formattedAddress || 'Clearwater, Florida'} · within ${r} miles`;
+  $('#scope').textContent=`${data.center?.formattedAddress || 'New Port Richey, Florida'} · within ${r} miles`;
 }
 function inRadius(store,r){
   // If distance could not be resolved during sync, keep it available only at the max setting.
