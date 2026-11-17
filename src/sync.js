@@ -178,9 +178,21 @@ for (let index = 0; index < stores.length; index++) {
   let tickets = 0;
   const unique = new Set();
   let registrationFailures = 0;
+  const qualifyingEvents = [];
+
   for (const event of metricEvents) {
     try {
       const registrations = await registrationsWithRetry(event.id);
+
+      // An event must have at least 4 registered players to count.
+      // This includes free-play and trading events that meet the minimum.
+      if (registrations.length < 4) {
+        console.log(`  Skipping event ${event.id}: only ${registrations.length} registration(s).`);
+        await new Promise(r => setTimeout(r, 100));
+        continue;
+      }
+
+      qualifyingEvents.push(event);
       tickets += registrations.length;
       for (const reg of registrations) {
         const key = playerKey(reg);
@@ -193,9 +205,9 @@ for (let index = 0; index < stores.length; index++) {
     await new Promise(r => setTimeout(r, 100));
   }
 
-  const prereleases = metricEvents.filter(isPrerelease);
+  const prereleases = qualifyingEvents.filter(isPrerelease);
   const metrics = {
-    events: metricEvents.length,
+    events: qualifyingEvents.length,
     uniquePlayers: unique.size,
     tickets,
     prereleasesRun: prereleases.length,
@@ -236,6 +248,7 @@ const payload = {
   methodology: {
     metricWindow: config.metricWindow,
     prereleaseNote: "Prerelease participation is shown but not used as a failing requirement until exact eligible-set data is configured.",
+    eventActivityNote: "An event counts toward estimated tier metrics only when at least 4 players are registered. Events with fewer registrations are excluded from events, tickets, unique players, and prereleases.",
     playerIdentityNote: "Stable opaque IDs are preferred. Display-name fallback may slightly over/under-count unique players if API IDs are unavailable. Player names are not published."
   },
   stores: outputStores
