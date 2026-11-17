@@ -2,7 +2,7 @@
 
 Unofficial community tracker centered on **New Port Richey, Florida**. It collects Ravensburger Play Hub stores within 40 miles during the weekly sync and displays a **15-mile default radius** on the website. Users can expand the radius up to 40 miles and optionally include stores with zero events.
 
-The tier estimates use a rolling 365-day proxy and the published Standard/Legendary maintenance thresholds. Stores with less than one year of recorded Play Hub activity use estimated prorated thresholds and are marked with an asterisk.
+The tier estimates use a rolling 52-week (364-day) proxy and the published Standard/Legendary maintenance thresholds. All stores use the same fixed thresholds without first-year proration.
 
 ## GitHub Pages setup
 
